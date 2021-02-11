@@ -30,3 +30,5 @@ autocmd BufWinEnter * silent NERDTreeMirror
 " Disable these at your own risk!
 set nobackup
 set noswapfile
+
+set mouse=a
