@@ -7,6 +7,14 @@ syntax on
 call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-fugitive' " Git plugin
 	Plug 'preservim/nerdtree' " File system explorer
+	Plug 'dense-analysis/ale' " Linting
+
+        Plug 'prabirshrestha/vim-lsp' " Add language server support
+	Plug 'mattn/vim-lsp-settings' " Makes setting up LSP easier
+
+	Plug 'prabirshrestha/asyncomplete.vim' " Autocomplete
+	Plug 'prabirshrestha/asyncomplete-lsp.vim' " Autocomplete using LSP
+
 call plug#end()
 
 " Search down into subfolders
