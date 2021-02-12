@@ -14,8 +14,14 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'prabirshrestha/asyncomplete.vim' " Autocomplete
 	Plug 'prabirshrestha/asyncomplete-lsp.vim' " Autocomplete using LSP
-
+	
+	Plug 'arcticicestudio/nord-vim' " Nord colorscheme
+	Plug 'vim-airline/vim-airline' " Statusline
+	Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+let g:airline_theme='nord'
+colorscheme nord
 
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
