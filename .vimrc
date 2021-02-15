@@ -1,6 +1,6 @@
-set nocompatible " So Vim doesn't pretend to be Vi.
-set relativenumber " Show relative line numbers.
-set nu rnu " Shows real line number between relative ones.
+set nocompatible " So Vim doesn't pretend to be Vi
+set relativenumber " Show relative line numbers
+set nu rnu " Shows real line number between relative ones
 syntax on
 
 " My list of plugins (using vim-plug)
@@ -11,24 +11,21 @@ call plug#begin('~/.vim/plugged')
 
         Plug 'prabirshrestha/vim-lsp' " Add language server support
 	Plug 'mattn/vim-lsp-settings' " Makes setting up LSP easier
-
-	Plug 'prabirshrestha/asyncomplete.vim' " Autocomplete
-	Plug 'prabirshrestha/asyncomplete-lsp.vim' " Autocomplete using LSP
 	
 	Plug 'arcticicestudio/nord-vim' " Nord colorscheme
-	Plug 'vim-airline/vim-airline' " Statusline
-	Plug 'vim-airline/vim-airline-themes'
+	
+	" Use release branch (recommend)
+ 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-let g:airline_theme='nord'
+" Set colorscheme for Vim to nord
 colorscheme nord
-
-" Search down into subfolders
-" Provides tab-completion for all file-related tasks
-set path+=**
 
 " Display all matching files when using tab complete
 set wildmenu
+
+" Set cursor line
+set cursorline 
 
 " Autoindent
 filetype plugin indent on
