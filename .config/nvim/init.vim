@@ -2,7 +2,6 @@ set nu rnu " Shows real line number between relative ones
 syntax on
 
 nnoremap <Space> <Nop>
-let mapleader = "\<Space>"
 
 source $HOME/.config/nvim/vim-plug/mappings.vim
 source $HOME/.config/nvim/vim-plug/plug-install.vim
