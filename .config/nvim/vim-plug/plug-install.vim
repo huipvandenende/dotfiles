@@ -10,7 +10,7 @@ call plug#begin('~/.vim/plugged')
 	" Fuzzy file searcher
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
-
+	" Plug 'nvim-telescope/telescope.nvim' Enable when nvim v0.5!
 	" Use release branch (recommend)
  	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -19,7 +19,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'BurntSushi/ripgrep' " Searches for regex pattern
 	Plug 'airblade/vim-rooter' " Change working dir of vim when opening file or directory
 
-	" Plug 'dominikduda/vim_current_word' " Highlights current word under cursor
+	Plug 'vimwiki/vimwiki' " Vim wiki
 	Plug 'tomtom/tcomment_vim' " Easy comments
 call plug#end()
 

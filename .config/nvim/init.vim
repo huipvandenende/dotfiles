@@ -8,6 +8,7 @@ source $HOME/.config/nvim/vim-plug/plug-install.vim
 source $HOME/.config/nvim/vim-plug/fzf.vim
 source $HOME/.config/nvim/vim-plug/coc.vim
 source $HOME/.config/nvim/vim-plug/which-key.vim
+source $HOME/.config/nvim/vim-plug/vimwiki.vim
 
 if empty(glob('~/.vim/autoload/plug.vim'))
 	  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -19,7 +20,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 " Set colorscheme for Vim to gruvbox
 let g:gruvbox_italic=1 " Some terminals screw up italics so beware!
 let g:gruvbox_contrast_light = 'hard'
-let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_dark = 'medium'
 
 colorscheme gruvbox
 

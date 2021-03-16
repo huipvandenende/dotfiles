@@ -14,13 +14,4 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-" fzf remappings
-nmap <C-P> : FZF<CR>
-
-" Can't rebind ctrl-v for vsplit on Windows!
-let g:fzf_action = {
-	\ 'ctrl-w': 'vsplit',
-	\ 'ctrl-s': 'split',
-	\ 'ctrl-o': 'tab split'
-  \ }
 

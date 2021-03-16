@@ -7,7 +7,6 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
@@ -109,3 +108,16 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+" fzf remappings
+nmap <C-P> :Files<CR>
+nmap <C-G> :GFiles<CR>
+nmap <C-F> :Files %:p:h<CR>
+
+" Can't rebind ctrl-v for vsplit on Windows!
+let g:fzf_action = {
+	\ 'ctrl-w': 'vsplit',
+	\ 'ctrl-s': 'split',
+	\ 'ctrl-o': 'tab split'
+  \ }
