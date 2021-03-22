@@ -49,5 +49,12 @@ set noshowmode
 set nobackup
 set noswapfile
 
+" enable indentation
+set breakindent
+"
+" Smart indent
+" ident by an additional 2 characters on wrapped lines, when line >= 40 characters, put 'showbreak' at start of line
+set breakindentopt=shift:2,min:40,sbr
+
 " Enables mouse for lazy times
 set mouse=a

@@ -21,5 +21,6 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'vimwiki/vimwiki' " Vim wiki
 	Plug 'tomtom/tcomment_vim' " Easy comments
+	Plug 'jiangmiao/auto-pairs' " Pairs brackets etc
 call plug#end()
 
