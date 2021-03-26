@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'sharkdp/fd' " find that respects ,gitignore
 	Plug 'BurntSushi/ripgrep' " Searches for regex pattern
 	Plug 'airblade/vim-rooter' " Change working dir of vim when opening file or directory
+	Plug 'airblade/vim-gitgutter' " Adds git info on the side
 
 	Plug 'vimwiki/vimwiki' " Vim wiki
 	Plug 'tomtom/tcomment_vim' " Easy comments
