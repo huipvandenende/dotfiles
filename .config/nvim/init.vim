@@ -1,6 +1,5 @@
 set nu rnu " Shows real line number between relative ones
 syntax on
-
 nnoremap <Space> <Nop>
 
 " My list of plugins (using vim-plug)
@@ -13,7 +12,11 @@ call plug#begin('~/.vim/plugged')
 	Plug 'sainnhe/everforest' " Everforest theme
 
 	Plug 'vim-airline/vim-airline'
-	"
+	
+	" Notes/Wiki for Vim.
+	Plug 'vimwiki/vimwiki'
+
+
 	" Fuzzy file searcher
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
@@ -48,9 +51,11 @@ let g:gruvbox_italic=1 " Some terminals screw up italics so beware!
 let g:gruvbox_contrast_light = 'hard'
 let g:gruvbox_contrast_dark = 'medium'
 
-" colorscheme gruvbox
-colorscheme one
-set bg=light
+colorscheme gruvbox
+" colorscheme one
+" set bg=light
+
+set guicursor=
 
 " Hides end of buffer icons (~)
 hi EndOfBuffer ctermfg=bg ctermbg=bg
@@ -289,3 +294,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline
 set statusline^=%{coc#status()}
+
+" Use Markdown as default for Vimwiki.
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
