@@ -47,13 +47,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     endif
 
 " Set colorscheme for Vim to gruvbox
-let g:gruvbox_italic=1 " Some terminals screw up italics so beware!
+let g:gruvbox_italic=0 " Some terminals screw up italics so beware!
 let g:gruvbox_contrast_light = 'hard'
 let g:gruvbox_contrast_dark = 'medium'
 
-colorscheme gruvbox
-" colorscheme one
-" set bg=light
+" colorscheme gruvbox
+colorscheme one
+set bg=light
 
 set guicursor=
 
@@ -191,9 +191,6 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -241,15 +238,15 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 
 " fzf remappings
-nmap <C-P> :Files<CR>
-nmap <C-G> :GFiles<CR>
-nmap <C-F> :Files %:p:h<CR>
+nmap <leader>F :Files<CR>
+" nmap <leader>g :GFiles<CR>
+nmap <leader>f :Files %:p:h<CR>
 
 " Can't rebind ctrl-v for vsplit on Windows!
 let g:fzf_action = {
-	\ 'ctrl-w': 'vsplit',
-	\ 'ctrl-s': 'split',
-	\ 'ctrl-o': 'tab split'
+	\ 'ctrl-s': 'vsplit',
+	\ 'ctrl-h': 'split',
+	\ 'ctrl-t': 'tab split'
   \ }
 
 " TextEdit might fail if hidden is not set.
@@ -298,3 +295,6 @@ set statusline^=%{coc#status()}
 " Use Markdown as default for Vimwiki.
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
+
+:nnoremap <leader>b :buffers<CR>:buffer<Space>
+
